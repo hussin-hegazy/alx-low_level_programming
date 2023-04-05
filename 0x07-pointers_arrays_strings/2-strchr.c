@@ -13,7 +13,7 @@ if (s[x] == c)
 {
 return (s + x);
 }
-els
+}
 return ('\0');
 }
-}
+
