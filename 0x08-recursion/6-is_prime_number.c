@@ -1,5 +1,5 @@
 #include "main.h"
-int _primo(int num_, int inf);
+int _primo(int x, int y);
 
 /**
  * is_prime_number - function that  returns 1 if the input integer is a prime.
