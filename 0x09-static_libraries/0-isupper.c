@@ -1,14 +1,23 @@
 #include "main.h"
+
 /**
- * _isupper - uppercase letters
- * @c: char to check
+ * _isupper - returns 1 if uppercase, 0 otherwise
+ * @c: Input parameter in ASCII
  *
- * Return: 0 or 1
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 int _isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	if
-	return (0);
+	int i;
+
+	if ((c > 64) && (c < 91))
+	{
+		i = 1;
+	}
+	else
+	{
+		i = 0;
+	}
+	return (i);
 }
