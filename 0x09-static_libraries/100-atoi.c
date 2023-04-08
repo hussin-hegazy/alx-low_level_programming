@@ -1,31 +1,32 @@
-100-atoi.c
-
-
 #include "main.h"
 /**
- * _atoi - convert a string into an integer.
+ * _atoi - copies the string pointed to by src
+ *@s: first value to check
  *
- * @s: the string to use.
- *
- * Return: integer.
+ * Return: result
  */
 int _atoi(char *s)
 {
- 	int sign = 1, i = 0;
- 	unsigned int res = 0;
+	unsigned int result = 0;
+	int i = 0, j = 0, a = 0, negat = 1;
 
-
- 	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
- 	{
- 		if (s[i] == '-')
- 			sign *= -1;
- 		i++;
- 	}
- 	while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
- 	{
- 		res = (res * 10) + (s[i] - '0');
- 		i++;
- 	}
- 	res *= sign;
- 	return (res);
- }
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	for (j = 0; j < i; j++)
+	{
+		if (s[j] == '-')
+			negat = negat * -1;
+		while ((s[j] >= '0') && (s[j] <= '9'))
+		{
+			result = (result * 10) + (s[j] - '0');
+			j++;
+			a = 1;
+		}
+		if (a == 1)
+			j = i;
+	}
+	result = result * negat;
+	return (result);
+}
