@@ -12,7 +12,7 @@ int x;
 char er[] = "Error";
 if (argc != 3)
 {
-printf("%s", er);
+printf("%s\n", er);
 return (1);
 }
 x = atoi(argv[1]) * atoi(argv[2]);
