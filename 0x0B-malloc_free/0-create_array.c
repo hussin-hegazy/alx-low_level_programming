@@ -14,7 +14,7 @@ int y;
 char *xarray;
 if (size == 0)
 {
-return (NULL)
+return (NULL);
 }
 xarray = malloc(sizeof(char) * size);
 if (xarray == 0)
@@ -23,7 +23,7 @@ return (NULL);
 }
 for (y = 0; y < size; y++)
 {
-xarray[y] = c ;
+xarray[y] = c;
 }
 return (xarray);
 }
