@@ -8,27 +8,28 @@
  */
 int main(int argc, char *argv[])
 {
-int sum = 0;
-int num;
-char *endptr;
+int x = 0;
+int y;
+int i;
+char *kl;
 if (argc == 1)
 {
 printf("0\n");
 return (0);
 }
-for (int i = 1; i < argc; i++)
+for ( i = 1; i < argc; i++)
 {
-num = strtol(argv[i], &endptr, 10);
-if (*endptr != '\0')
+y = strtol(argv[i], &kl, 10);
+if (*kl != '\0')
 {
 printf("Error\n");
 return (1);
 }
-if (num > 0)
+if (y > 0)
 {
-sum += num;
+x += y;
 }
 }
-printf("%d\n", sum);
+printf("%d\n", x);
 return (0);
 }
