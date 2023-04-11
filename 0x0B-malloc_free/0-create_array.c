@@ -10,7 +10,7 @@
  */
 char *create_array(unsigned int size, char c)
 {
-int y;
+unsigned int y;
 char *x;
 if (size == 0)
 return (NULL);
