@@ -17,7 +17,7 @@ if (argc == 1)
 printf("0\n");
 return (0);
 }
-for ( i = 1; i < argc; i++)
+for (i = 1; i < argc; i++)
 {
 y = strtol(argv[i], &kl, 10);
 if (*kl != '\0')
