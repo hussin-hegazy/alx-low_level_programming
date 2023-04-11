@@ -24,6 +24,7 @@ return (NULL);
 for (y = 0; y < size; y++)
 {
 x[y] = c;
+*(x + y) = '\0';
 }
 return (x);
 }
