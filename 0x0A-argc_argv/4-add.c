@@ -4,6 +4,7 @@
 /**
  *main - function returning an integer.
  *@argc: argument c
+ *
  *@argv: argument v
  *Return: Success
  */
