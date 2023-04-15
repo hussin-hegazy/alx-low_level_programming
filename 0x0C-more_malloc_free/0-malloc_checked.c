@@ -5,14 +5,14 @@
  *malloc_checked - main function.
  *@b:number of items
  *
- *Return successful.
+ *Return: Pointer successful.
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+	void *mg;
 
 	p = malloc(b);
-	if (p == 0)
+	if (mg == 0)
 		exit(98);
-	return (p);
+	return (mg);
 }
