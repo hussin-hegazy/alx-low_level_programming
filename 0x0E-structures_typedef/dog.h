@@ -3,12 +3,12 @@
 
 
 **/
- * struct dog - Short description
+ * struct dog - define a new structure
  * @name: First member
  * @age: Second member
  * @owner: Third member
  *
- * Description: Longer description
+ * Description: Strcture with info about a dog
  */
 struct dog
 {
