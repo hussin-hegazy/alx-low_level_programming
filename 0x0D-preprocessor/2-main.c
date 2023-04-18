@@ -1,13 +1,12 @@
 #include <stdio.h>
 
 /**
- * main - name funtion.
- * @void: empty
+ * main - prints the name of the file it was compiled from
  *
- * Return: always 0
+ * Return: 0 if success, 1 if error
  */
 int main(void)
 {
-printf("%s\n”, __FILE__);
-return (0);
+	printf("%s\n", __FILE__);
+	return (0);
 }
