@@ -3,8 +3,8 @@
 #include "dog.h"
 
 /**
- * print_dog - main function 
- * @d: pointer
+ *print_dog - main function.
+ *@d: pointer
  *
  */
 

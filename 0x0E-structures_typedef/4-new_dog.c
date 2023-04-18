@@ -2,7 +2,7 @@
 #include "dog.h"
 
 /**
- * new_dog - function main
+ * new_dog - function that create a new dog
  * @name: value 1
  * @age: value 2
  * @owner: value 3
@@ -12,43 +12,43 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int x = 0, y = 0, z;
-	dog_t *pop;
+	int i = 0, j = 0, k;
+	dog_t *p;
 
 	if (name == NULL || owner == NULL)
 		return (NULL);
-	pop = malloc(sizeof(dog_t));
-	if (pop == NULL)
+	p = malloc(sizeof(dog_t));
+	if (p == NULL)
 		return (NULL);
-	while (name[x])
+	while (name[i])
 	{
-		x++;
+		i++;
 	}
-	while (owner[y])
+	while (owner[j])
 	{
-		y++;
+		j++;
 	}
-	pop->name = malloc(sizeof(char) * (x + 1));
-	if (ppop->name == NULL)
+	p->name = malloc(sizeof(char) * (i + 1));
+	if (p->name == NULL)
 	{
-		free(pop);
-		return (NULL);
-	}
-	pop->age = age;
-	pop->owner = malloc(sizeof(char) * (y + 1));
-	if (pop->owner == NULL)
-	{
-		free(pop->name);
-		free(pop);
+		free(p);
 		return (NULL);
 	}
-	for (z = 0; z <= x; z++)
+	p->age = age;
+	p->owner = malloc(sizeof(char) * (j + 1));
+	if (p->owner == NULL)
 	{
-		pop->name[z] = name[z];
+		free(p->name);
+		free(p);
+		return (NULL);
 	}
-	for (z = 0; z <= y; z++)
+	for (k = 0; k <= i; k++)
 	{
-		pop->owner[z] = owner[z];
+		p->name[k] = name[k];
 	}
-	return (pop);
+	for (k = 0; k <= j; k++)
+	{
+		p->owner[k] = owner[k];
+	}
+	return (p);
 }
