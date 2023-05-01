@@ -1,40 +1,40 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "lists.h"
-
+#include <stdio.h>
 /**
- * print_listint_safe - function that prints a linked list
- * @head: pointer to the head
+ * find_listint_loop - finds address of starting node in looped linked list
+ * @head: pointer to the head in linked list to test
  *
- * Return: number of nodes in the list
+ * Return: The address of the node where the loop starts,
+ * or NULL if there is no loop
  */
-
-size_t print_listint_safe(const listint_t *head)
+listint_t *find_listint_loop(listint_t *head)
 {
-	size_t count = 0;
-	listint_t *aux = (void *)head, *test = 0;
-	int flag = 0;
+	listint_t *hare, *tortoise;
 
-	while (aux != NULL)
+	if (!head)
+		return (NULL);
+
+	hare = tortoise = head;
+
+	while (tortoise && hare && hare->next)
 	{
-		if (flag == 0)
+		tortoise = tortoise->next;
+		hare = (hare->next)->next;
+
+		if (hare == tortoise)
 		{
-			test = aux;
-			printf("[%p] %d\n", (void *)aux, aux->n);
-		}
-		if (flag == 1)
-		{
-			if (test <= aux)
+			tortoise = head;
+
+			while (tortoise && hare)
 			{
-				printf("-> [%p] %d\n", (void *)aux, aux->n);
-				return (count);
+				if (tortoise == hare)
+					return (tortoise);
+
+				tortoise = tortoise->next;
+				hare = hare->next;
 			}
-			printf("[%p] %d\n", (void *)aux, aux->n);
 		}
-		count += 1;
-		test = aux;
-		aux = aux->next;
-		flag = 1;
 	}
-	return (count);
+
+	return (NULL);
 }
