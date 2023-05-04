@@ -17,7 +17,7 @@ for (y; b[y]; y++)
 {
 if (b[y] != '0' && b[y] != '1')
 return (0);
-nmbr = nmbr * 2 + (b[i] - '0');
+nmber = nmber * 2 + (b[i] - '0');
 }
 return (nmber);
 }
