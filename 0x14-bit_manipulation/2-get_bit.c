@@ -1,5 +1,5 @@
-#include "holberton.h"
-
+#include <stdio.h>
+#include "main.h"
 /**
  * get_bit - returns the value of a bit at a given index
  * @n: base 10 number
