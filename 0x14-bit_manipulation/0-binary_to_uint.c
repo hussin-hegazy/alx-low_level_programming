@@ -7,17 +7,19 @@
  *
  * Return: unsigned int
  */
+#include <stdio.h>
+
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int nmber = 0;
-int y = 0;
+unsigned int num = 0;
+int i;
 if (!b)
 return (0);
-for (y; b[y]; y++)
+for (i = 0; b[i]; i++)
 {
-if (b[y] != '0' && b[y] != '1')
+if (b[i] != '0' && b[i] != '1')
 return (0);
-nmber = nmber * 2 + (b[i] - '0');
+num = num * 2 + (b[i] - '0');
 }
-return (nmber);
+return (num);
 }
