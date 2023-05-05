@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "main.h"
+#include "main"
 /**
- * _putchar - writes the character c to stdout
- * @c: The character to print
+ * set_bit - sets the value of a bit to 1 at a given index
+ * @n: base 10 number
+ * @index: index to set to 1
  *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
+ * Return: 1 if it worked, or -1 if an error occurred
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
