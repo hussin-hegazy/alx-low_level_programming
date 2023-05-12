@@ -27,7 +27,7 @@ return (-1);
 fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 if (fd ==  -1)
 return (-1);
-for (i = 0; text_content != 0; i++)
+for (i = 0; text_content[i] != 0; i++)
 wrt = write(fd, text_content, i);
 if (wrt == -1)
 return (-1);
