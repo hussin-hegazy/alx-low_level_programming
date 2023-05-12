@@ -15,13 +15,13 @@
  * 0 if filename is NULL
  * 0 if write fails or does not write expected amount of bytes
  */
- ssize_t read_textfile(const char *filename, size_t letters)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
 int fd;
 size_t red, wrt;
-char bf;
+char *bf;
 if (filename == 0)
-return (0)	
+return (0);
 fd = open(filename, O_RDONLY);
 if (fd == -1)
 return (0);
