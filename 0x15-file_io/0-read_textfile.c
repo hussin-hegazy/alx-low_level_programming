@@ -31,7 +31,7 @@ return (0);
 red = read(fd, bf, letters);
 if (red == -1)
 return (0);
-wrt = write(STDOUT_FILENO, bf, letters);
+wrt = write(STDOUT_FILENO, bf, red);
 if (wrt == -1 || wrt != red)
 return (0);
 close(fd);
