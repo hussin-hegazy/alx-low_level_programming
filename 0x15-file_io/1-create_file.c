@@ -3,7 +3,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 /**
