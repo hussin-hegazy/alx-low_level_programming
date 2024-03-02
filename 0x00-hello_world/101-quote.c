@@ -1,7 +1,8 @@
 #include <unistd.h>
 /**
- * main fantion
- * raturn back
+* main - function
+*
+* Return: (0) -> Succ
  */
 int main(void)
 {
