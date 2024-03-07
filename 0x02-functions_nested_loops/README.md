@@ -1,1 +1,1 @@
-c
+new_stare
